@@ -1,2 +1,2 @@
-"Thesis title:Intelligent detection method of concrete structure disease based on YOLOv11-PC"
-"Journal name:The Visual Computer"
+"Thesis title: YOLOv11-PC: An Intelligent Detection Method for Concrete Structural Diseases"
+"Journal name: The Visual Computer"
