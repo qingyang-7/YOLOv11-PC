@@ -31,5 +31,6 @@ test:  E:\yolov11\datasets\data\images\test
 在train.py中选择模型配置文件和数据集配置文件，开始训练
 配置文件决定了模型的网络结构，我们自己设计的网络结构配置文件在\yolov11\ultralytics\cfg\models\addv11。
 实验用到的所有损失函数在\yolov11\ultralytics\utils\loss.py文件中修改。
+我们引入的所有模块在\yolov11\ultralytics\nn\newsAddmodules\路径中。
 
 验证时运行val.py,测试时运行predict.py
