@@ -4,7 +4,7 @@ import torch.nn.functional as F
 from ultralytics.nn.modules import C3
 
 __all__=['PSConv','C2f_PSConv','C3k2_PSConv']
-# 论文地址：https://arxiv.org/pdf/2412.16986
+
 
 def autopad(k, p=None, d=1):  # kernel, padding, dilation
     """Pad to 'same' shape outputs."""
