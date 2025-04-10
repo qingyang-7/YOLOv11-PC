@@ -5,8 +5,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 from ultralytics.nn.modules import C3
 __all__=['LocalAttention','CLAttention','C3k2_LA','C3k2_CLA','C2f_CLA','C2f_LA']
-# 论文链接：https://openaccess.thecvf.com/content/ACCV2024/papers/Wang_PlainUSR_Chasing_Faster_ConvNet_for_Efficient_Super-Resolution_ACCV_2024_paper.pdf
-# 代码：https://github.com/icandle/PlainUSR
 
 
 class SoftPooling2D(torch.nn.Module):
