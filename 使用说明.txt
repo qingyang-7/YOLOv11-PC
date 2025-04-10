@@ -37,4 +37,4 @@ test:  E:\yolov11\datasets\data\images\test
 
 CIoU、GIoU、DIoU、SIoU、EIoU、Shape-IoU的对比试验可以在loss.py设置，使用哪个损失函数就把哪个损失函数设置成True。
 
-消融实验用对应的配置文件，在\yolov11\ultralytics\cfg\models\addv11中选择对应的配置文件，配置文件已经配置好。
+消融实验用对应的配置文件，在\yolov11\ultralytics\cfg\models\addv11中选择对应的配置文件，配置文件已经配置完成，只需要把配置文件的路径放在训练文件对应的位置即可。
