@@ -5,6 +5,7 @@ warnings.filterwarnings('ignore')
 model_yaml_path = r'E:\yolov11\ultralytics\cfg\models\addv11\yolov11n-mey.yaml'
 #数据集配置文件
 
+
 data_yaml_path = r'E:\yolov11\data.yaml'
 if __name__ == '__main__':
     model = YOLO(model_yaml_path)
