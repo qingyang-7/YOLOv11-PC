@@ -5,7 +5,6 @@ from ultralytics.nn.modules import C3
 
 __all__=['PSConv','C2f_PSConv','C3k2_PSConv']
 
-
 def autopad(k, p=None, d=1):  # kernel, padding, dilation
     """Pad to 'same' shape outputs."""
     if d > 1:
