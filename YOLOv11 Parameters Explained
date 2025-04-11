@@ -1,0 +1,65 @@
+YOLOv11 introduces a variety of tunable parameters that control the behavior of model training, validation, inference, and export. Below is a detailed explanation of the most important parameters categorized by their function.
+1. Training Parameters (train.py)
+--data	Path to dataset configuration file (.yaml).
+--cfg	Path to YOLOv11 model architecture configuration file.
+--weights	Path to pre-trained weights (empty for training from scratch).	
+--epochs	Total number of training epochs.	
+--batch-size	Number of images per batch.	
+--img-size	Input image size (square).	
+--device	Compute device (cpu or 0,1,2 for GPU selection).	
+--workers	Number of data loading workers (threads).	
+--optimizer	Choice of optimizer (SGD or Adam).	
+--lr0	Initial learning rate.	0.01
+--lrf	Final learning rate (as a fraction of initial).	
+--momentum	Momentum for SGD optimizer.	
+--weight-decay	Weight decay (L2 regularization).
+--warmup-epochs	Number of warm-up epochs.
+--warmup-momentum	Initial momentum during warm-up.	
+--warmup-bias-lr	Initial bias learning rate during warm-up.	
+--iou-thres	Intersection over Union (IoU) threshold for NMS.	
+--hsv-h	HSV hue augmentation factor.	
+--hsv-s	HSV saturation augmentation factor.	
+--hsv-v	HSV brightness augmentation factor.	
+--degrees	Rotation augmentation range.	
+--translate	Translation augmentation factor.	
+--scale	Scaling augmentation factor.	
+--shear	Shear transformation augmentation.	
+--flipud	Vertical flip probability.	
+--fliplr	Horizontal flip probability.	
+--label-smoothing	Label smoothing factor (reduces overfitting).
+--patience	Early stopping patience (number of epochs).	
+--cache-images	Cache dataset in memory for faster training.	
+--resume	Resume training from a checkpoint.	
+2. Validation Parameters (val.py)
+--data	Path to dataset configuration file.	
+--weights	Path to trained model weights.	
+--batch-size	Batch size for validation.	
+--img-size	Input image size for evaluation.	
+--device	Compute device (cpu or gpu).	
+--iou-thres	IoU threshold for NMS.
+--task	Evaluation task (val, test, etc.).	
+--save-json	Save results in COCO JSON format.	
+--save-txt	Save detection results in .txt files.
+3. Object Detection Parameters (detect.py)
+--weights	Path to trained model weights.	
+--source	Input source (image/video/folder).	
+--img-size	Input image resolution.	
+--conf-thres	Confidence threshold for detections.	
+--iou-thres	IoU threshold for NMS.
+--device	Compute device.	
+--save-txt	Save results in .txt files.	
+--save-conf	Save confidence scores in .txt files.	
+--save-crop	Save cropped detected objects.	
+--augment	Use test-time augmentation.	
+--visualize	Visualize feature maps.	
+4. Model Export Parameters (export.py)
+--weights	Path to trained model weights.	
+--include	Export format (onnx, torchscript, coreml, engine).	
+--img-size	Input image size for exported model.
+--dynamic	Enable dynamic input size.	
+--simplify	Simplify ONNX model.	
+5. Model Configuration (yolov11.yaml)
+nc	Number of object classes.	
+depth_multiple	Depth multiplier (controls model depth).	
+width_multiple	Width multiplier (controls model width).	
+anchors	Predefined anchor box sizes.	
