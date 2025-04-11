@@ -1,9 +1,8 @@
-环境配置：
-第一步创建一个自己的虚拟环境：
+Configuration of the environment:Step 1: Create your own virtual environment:
 conda create -n new_name python=3.10
-第二步进入到自己的虚拟环境：
+Step 2: Enter your virtual environment:
 conda activate new_name
-第三步：
+Step 3:
 conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch-nightly -c nvidia
 pip install ultralytics -i https://pypi.tuna.tsinghua.edu.cn/simple 
 pip install torchsummary -i https://pypi.tuna.tsinghua.edu.cn/simple 
@@ -19,24 +18,18 @@ pip install timm==1.0.7 thop efficientnet_pytorch==0.7.1 einops grad-cam==1.4.8 
 pip install -U openmim -i https://pypi.tuna.tsinghua.edu.cn/simple 
 mim install mmengine -i https://pypi.tuna.tsinghua.edu.cn/simple 
 mim install "mmcv>=2.0.0" -i https://pypi.tuna.tsinghua.edu.cn/simple
-
-构建数据集
-按照下面的路径存放数据集，并在datda.yaml文件里修改
+Build the dataset:
+Store the dataset according to the following path and modify the label names in the data.yaml file.
 path: E:\yolov11\datasets\data 
 train: E:\yolov11\datasets\data\images\train  
 val: E:\yolov11\datasets\data\images\val 
-test:  E:\yolov11\datasets\data\images\test
-
-训练数据集：
-在train.py中选择模型配置文件和数据集配置文件，开始训练
-配置文件决定了模型的网络结构，我们自己设计的网络结构配置文件在\yolov11\ultralytics\cfg\models\addv11。
-实验用到的所有损失函数在\yolov11\ultralytics\utils\loss.py文件中修改。
-我们引入的所有模块在\yolov11\ultralytics\nn\newsAddmodules\路径中。
-
-验证时运行val.py,测试时运行predict.py
-
-CIoU、GIoU、DIoU、SIoU、EIoU、Shape-IoU的对比试验可以在loss.py设置，使用哪个损失函数就把哪个损失函数设置成True。
-
-消融实验用对应的配置文件，在\yolov11\ultralytics\cfg\models\addv11中选择对应的配置文件，配置文件已经配置完成，只需要把配置文件的路径放在训练文件对应的位置即可。
-
-对比试验使用mmdetection，详细的教程在https://mmdetection.readthedocs.io/zh-cn/latest/user_guides/index.html
+test: E:\yolov11\datasets\data\images\test
+Train the dataset:
+Select the model configuration file and dataset configuration file in train.py, then start training.
+The configuration file determines the network structure of the model. Our custom-designed network configuration files are located at \yolov11\ultralytics\cfg\models\addv11.
+All loss functions used in the experiment can be modified in \yolov11\ultralytics\utils\loss.py.
+Comparative experiments on CIoU, GIoU, DIoU, SIoU, EIoU, and Shape-IoU can be configured in loss.py. Set the desired loss function to True to activate it.
+All introduced modules are located in \yolov11\ultralytics\nn\newsAddmodules\.
+Run val.py for validation and predict.py for testing.
+For ablation experiments, select the corresponding configuration file in \yolov11\ultralytics\cfg\models\addv11. The configurations are pre-defined, and you only need to specify the correct file path in the training script.
+The comparative experiment uses MMDetection. Detailed tutorials can be found at https://mmdetection.readthedocs.io/zh-cn/latest/user_guides/index.html.
